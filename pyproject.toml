@@ -1,0 +1,25 @@
+[project]
+name = "infra-report"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+packages = [{include = "infra_report"}]
+
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "boto3 (>=1.36.21,<2.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "pyyaml (>=6.0.2,<7.0.0)",
+    "markdown (>=3.7,<4.0)",
+    "argparse (>=1.4.0,<2.0.0)",
+]
+
+[tool.poetry.scripts]
+infra_report = "infra_report.main:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
